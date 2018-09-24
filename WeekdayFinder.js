@@ -2,9 +2,13 @@ var date;
 var year;
 var month;
 var day;
+var calcYear;
+var calcMonth;
+var calcCentury
 
 function main(){
     getDate()
+    console.log(calcMonth)
 }
 
 function getDate(){
@@ -12,6 +16,7 @@ function getDate(){
    getYear()
    getMonth()
    getDay()
+   getCalcMonth()
 }
 
 function getYear(){
@@ -28,5 +33,19 @@ function getDay(){
     dayString = date.charAt(8)+date.charAt(9)
     day = parseInt(dayString)
 }
+
+function getCalcMonth(){
+    if(month==1){
+        calcMonth = 11
+    }
+    else if(month==2){
+        calcMonth = 12
+    }
+    else{
+        calcMonth = month-2
+    }
+}
+
+
 
 
