@@ -4,11 +4,11 @@ var month;
 var day;
 var calcYear;
 var calcMonth;
-var calcCentury
+var calcCentury;
 
 function main(){
     getDate()
-    console.log(calcMonth)
+    console.log(calcCentury)
 }
 
 function getDate(){
@@ -17,6 +17,8 @@ function getDate(){
    getMonth()
    getDay()
    getCalcMonth()
+   getCalcYear()
+   getCalcCentury()
 }
 
 function getYear(){
@@ -43,6 +45,22 @@ function getCalcMonth(){
     }
     else{
         calcMonth = month-2
+    }
+}
+
+function getCalcYear(){
+    calcYear = year % 100
+    if(month==1 || month==2){
+        calcYear -= 1
+    }
+}
+
+function getCalcCentury(){
+    if(month==1 || month==2){
+        calcCentury = Math.floor((year-1) / 100)
+    }
+    else{
+        calcCentury = Math.floor(year / 100)
     }
 }
 
