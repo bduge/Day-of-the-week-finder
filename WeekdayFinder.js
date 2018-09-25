@@ -6,21 +6,23 @@ var calcYear;
 var calcMonth;
 var calcCentury;
 var dayInt;
+var dayOfWeek;
 
 function main(){
     getDate()
-    console.log(dayInt)
+    getYear()
+    getMonth()
+    getDay()
+    getCalcMonth()
+    getCalcYear()
+    getCalcCentury()
+    getDayAsInt()
+    getDayAsString()
 }
 
 function getDate(){
    date = document.getElementById("datePicker").value
-   getYear()
-   getMonth()
-   getDay()
-   getCalcMonth()
-   getCalcYear()
-   getCalcCentury()
-   getDayAsInt()
+   
 }
 
 function getYear(){
@@ -70,6 +72,31 @@ function getDayAsInt(){
     dayInt = (day + Math.floor(2.6*calcMonth -0.2) - (2*calcCentury)
     + calcYear + Math.floor(calcYear/4) + Math.floor(calcCentury/4))%7
 }
+
+function getDayAsString(){
+    if (dayInt=1){
+        dayOfWeek = "Monday"
+    }
+    else if (dayInt=2){
+        dayOfWeek = "Tuesday"
+    }
+    else if (dayInt=3){
+        dayOfWeek = "Wednesday"
+    }
+    else if (dayInt=4){
+        dayOfWeek = "Thursday"
+    }
+    else if (dayInt=5){
+        dayOfWeek = "Friday"
+    }
+    else if (dayInt=6){
+        dayOfWeek = "Saturday"
+    }
+    else if (dayInt=7){
+        dayOfWeek = "Sunday"
+    }
+}
+
 
 
 
