@@ -5,10 +5,11 @@ var day;
 var calcYear;
 var calcMonth;
 var calcCentury;
+var dayInt;
 
 function main(){
     getDate()
-    console.log(calcCentury)
+    console.log(dayInt)
 }
 
 function getDate(){
@@ -19,6 +20,7 @@ function getDate(){
    getCalcMonth()
    getCalcYear()
    getCalcCentury()
+   getDayAsInt()
 }
 
 function getYear(){
@@ -62,6 +64,11 @@ function getCalcCentury(){
     else{
         calcCentury = Math.floor(year / 100)
     }
+}
+
+function getDayAsInt(){
+    dayInt = (day + Math.floor(2.6*calcMonth -0.2) - (2*calcCentury)
+    + calcYear + Math.floor(calcYear/4) + Math.floor(calcCentury/4))%7
 }
 
 
