@@ -18,6 +18,7 @@ function main(){
     getCalcCentury()
     getDayAsInt()
     getDayAsString()
+    printDay()
 }
 
 function getDate(){
@@ -97,7 +98,9 @@ function getDayAsString(){
     }
 }
 
-
+function printDay(){
+    document.getElementById("display").innerHTML = date + " is a " + dayOfWeek
+}
 
 
 
